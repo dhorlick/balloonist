@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--for DTD see "http://comicsml.jmac.org/comics_ml.dtd" -->
+<comic version="0.2">
+    <title>Krazy Kat</title>
+    <person>
+        <firstname>George</firstname>
+        <surname>Herriman</surname>
+        <job>creator</job>
+    </person>
+    <last-built>2004-06-13 23:18:39</last-built>
+    <strip id="Krazy_Kat-Clock_Strikes_Four">
+        <date>1922-11-13</date>
+        <title>Clock Strikes Four</title>
+        <url>images/1922-11-13.jpg</url>
+        <panels>
+            <panel>
+                <panel-desc>
+                    <action>Krazy watches a dog carry a large
+                        grandfather clock past two other dogs.</action>
+                </panel-desc>
+            </panel>
+            <panel>
+                <panel-desc>
+                    <action>The dog unknowingly hits the two other dogs
+                        with the clock, just as the clock chimes four times.</action>
+                    <speech>
+                        <character>Krazy Kat</character>
+                        <text>
+                            <bang/>
+                        </text>
+                    </speech>
+                </panel-desc>
+            </panel>
+            <panel>
+                <panel-desc>
+                    <speech>
+                        <character>Krazy Kat</character>
+                        <text>And then, just as that clock struck four,
+                            it struck two.</text>
+                    </speech>
+                    <speech>
+                        <character>Ignatz Mouse</character>
+                        <text>Koo koo</text>
+                    </speech>
+                </panel-desc>
+            </panel>
+            <panel>
+                <panel-desc>
+                    <speech>
+                        <character>Ignatz Mouse</character>
+                        <text>Brick!! Strike thou <emphasis>one</emphasis>
+                        </text>
+                    </speech>
+                </panel-desc>
+            </panel>
+        </panels>
+    </strip>
+    <strip id="Krazy_Kat-Which_Way">
+        <date>1922-11-14</date>
+        <title>Which Way?</title>
+        <url>images/1922-11-14.jpg</url>
+        <panels>
+            <panel>
+                <panel-desc>
+                    <speech>
+                        <character>Elevator Operator</character>
+                        <text>Which way are you going?</text>
+                    </speech>
+                    <speech>
+                        <character>Krazy Kat</character>
+                        <text>Which ways have you?</text>
+                    </speech>
+                </panel-desc>
+            </panel>
+            <panel>
+                <panel-desc>
+                    <speech>
+                        <character>Elevator Operator</character>
+                        <text>Up and down.</text>
+                    </speech>
+                    <speech>
+                        <character>Krazy Kat</character>
+                        <text>Good.</text>
+                    </speech>
+                </panel-desc>
+            </panel>
+            <panel>
+                <panel-desc>
+                    <action>Krazy has walked inside the elevator.</action>
+                    <speech>
+                        <character>Elevator Operator</character>
+                        <text>What floor do you want?</text>
+                    </speech>
+                    <speech>
+                        <character>Krazy Kat</character>
+                        <text>What floors have you?</text>
+                    </speech>
+                </panel-desc>
+            </panel>
+            <panel>
+                <panel-desc>
+                    <action>The elevator operator can be seen kicking
+                        Krazy out of the elevator.</action>
+                </panel-desc>
+            </panel>
+        </panels>
+    </strip>
+    <strip id="Krazy_Kat-Poor_Old_Ignatz">
+        <date>1922-11-15</date>
+        <title>Poor Old Ignatz</title>
+        <url>images/1922-11-15.jpg</url>
+        <panels>
+            <panel>
+                <panel-desc>
+                    <speech>
+                        <character>Doctor</character>
+                        <text>Give him one of these pills every four hours.</text>
+                    </speech>
+                </panel-desc>
+            </panel>
+            <panel>
+                <panel-desc>
+                    <speech>
+                        <character>Krazy Kat</character>
+                        <text>Well Docta, how is poor ol&apos; Ignatz?</text>
+                    </speech>
+                    <speech>
+                        <character>Doctor</character>
+                        <text>He&apos;s very very sick. He has acute insomnia.</text>
+                    </speech>
+                </panel-desc>
+            </panel>
+            <panel>
+                <panel-desc>
+                    <action>Later, Krazy is in Ignatz&apos;s bedroom.</action>
+                    <speech>
+                        <character>Krazy Kat</character>
+                        <text>Gosh. Here it is the time for his pill and
+                            he&apos;s sound asleep.</text>
+                    </speech>
+                </panel-desc>
+            </panel>
+            <panel>
+                <panel-desc>
+                    <speech tone="shout">
+                        <character>Krazy Kat</character>
+                        <text>Hey Ignatz!!! Wake up - it&apos;s time to
+                            take a pill for your insomnia.</text>
+                    </speech>
+                </panel-desc>
+            </panel>
+        </panels>
+    </strip>
+    <strip id="Krazy_Kat-Early_Bird">
+        <date>1922-11-16</date>
+        <title>Early Bird</title>
+        <url>images/1922-11-16.jpg</url>
+        <panels>
+            <panel>
+                <panel-desc>
+                    <action>Ignatz is out of bed and touching his toes.</action>
+                    <speech>
+                        <character>Ignatz Mouse</character>
+                        <text>How wonderful it is to get up early.</text>
+                    </speech>
+                    <speech>
+                        <character>Krazy Kat</character>
+                        <text>Yes?</text>
+                    </speech>
+                </panel-desc>
+            </panel>
+            <panel>
+                <panel-desc>
+                    <action>Ignatz stretches in bed with Krazy as the
+                        sun pokes up behind the horizon.</action>
+                    <speech>
+                        <character>Ignatz Mouse</character>
+                        <text>Ah-h-h- it seems to be early.</text>
+                    </speech>
+                    <speech>
+                        <character>Krazy Kat</character>
+                        <text>So it seems.</text>
+                    </speech>
+                </panel-desc>
+            </panel>
+            <panel>
+                <panel-desc>
+                    <speech>
+                        <character>Ignatz Mouse</character>
+                        <text>Nothing like it.</text>
+                    </speech>
+                    <speech>
+                        <character>Krazy Kat</character>
+                        <text>Except getting up <emphasis>late</emphasis>.</text>
+                    </speech>
+                </panel-desc>
+            </panel>
+            <panel>
+                <panel-desc>
+                    <action>Ignatz throws a brick at Krazy.</action>
+                    <speech>
+                        <character>Ignatz Mouse</character>
+                        <text>Early r late brick - early r late</text>
+                    </speech>
+                </panel-desc>
+            </panel>
+        </panels>
+    </strip>
+    <strip id="Krazy_Kat-Ten_Baby_Fingers">
+        <date>1922-11-17</date>
+        <title>Ten Baby Fingers</title>
+        <url>images/1922-11-17.jpg</url>
+        <panels>
+            <panel>
+                <panel-desc>
+                    <speech>
+                        <character>Ignatz Mouse</character>
+                        <text>Ten baby fingers and ten baby toes -</text>
+                    </speech>
+                    <speech>
+                        <character>Krazy Kat</character>
+                        <text>A very very nice song &quot;Ignatz&quot;</text>
+                    </speech>
+                </panel-desc>
+            </panel>
+            <panel>
+                <panel-desc>
+                    <speech>
+                        <character>Ignatz Mouse</character>
+                        <text>Yes, and full of sentiment</text>
+                    </speech>
+                    <speech>
+                        <character>Krazy Kat</character>
+                        <text>Yes, and full of mystery to me -</text>
+                    </speech>
+                </panel-desc>
+            </panel>
+            <panel>
+                <panel-desc>
+                    <speech>
+                        <character>Ignatz Mouse</character>
+                        <text>What&apos;s mysterious about it?</text>
+                    </speech>
+                    <speech>
+                        <character>Krazy Kat</character>
+                        <text>Well, I never knew before that
+                            &quot;fingers&quot; and &quot;toes&quot; was
+                            ever infants.</text>
+                    </speech>
+                </panel-desc>
+            </panel>
+            <panel>
+                <panel-desc>
+                    <action>Ignatz bends over to collect several tiny bricks.</action>
+                    <speech>
+                        <character>Ignatz Mouse</character>
+                        <text>And ten baby bricks.</text>
+                    </speech>
+                    <speech>
+                        <character>Krazy Kat</character>
+                        <text>I always considered them adulks.</text>
+                    </speech>
+                </panel-desc>
+            </panel>
+        </panels>
+    </strip>
+    <strip id="Krazy_Kat-The_Space_We_Have">
+        <date>1922-11-18</date>
+        <title>The Space We Have</title>
+        <url>images/1922-11-18.jpg</url>
+        <panels>
+            <panel>
+                <panel-desc>
+                    <speech>
+                        <character>Ignatz Mouse</character>
+                        <text>Think of the space we have, &quot;Krazy&quot;.</text>
+                    </speech>
+                    <speech>
+                        <character>Krazy Kat</character>
+                        <text>We sure got a lot of it.</text>
+                    </speech>
+                </panel-desc>
+            </panel>
+            <panel>
+                <panel-desc>
+                    <speech>
+                        <character>Ignatz Mouse</character>
+                        <text>The sun, the moon, the stars are all lost
+                            in it.</text>
+                    </speech>
+                    <speech>
+                        <character>Krazy Kat</character>
+                        <text>So they is.</text>
+                    </speech>
+                </panel-desc>
+            </panel>
+            <panel>
+                <panel-desc>
+                    <speech>
+                        <character>Ignatz Mouse</character>
+                        <text>All of which gives me great fear.</text>
+                    </speech>
+                    <speech>
+                        <character>Krazy Kat</character>
+                        <text>How comes that?</text>
+                    </speech>
+                </panel-desc>
+            </panel>
+            <panel>
+                <panel-desc>
+                    <speech>
+                        <character>Ignatz Mouse</character>
+                        <text>That some day this brick will be lost on
+                            its way to your bean.</text>
+                    </speech>
+                    <action>Unsurprisingly, Ignatz hits Krazy with a brick.</action>
+                </panel-desc>
+            </panel>
+        </panels>
+    </strip>
+</comic>

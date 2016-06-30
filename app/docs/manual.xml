@@ -1,0 +1,1277 @@
+<?xml version='1.0'?>
+<book xmlns="http://docbook.org/ns/docbook"
+		xmlns:xl="http://www.w3.org/1999/xlink"
+		version="5.0"
+		xml:lang="en">
+	<title>Balloonist 2.0.3 User Manual</title>
+	
+	<info>
+		<copyright>
+			<year>2016</year>
+			<holder>Dave Horlick</holder>
+		</copyright>
+	</info>
+
+	<chapter>
+		<title>Getting Started</title>
+		
+		<para><emphasis>Balloonist</emphasis> is a software application to help layout comics
+		text balloons and panels.</para>
+		
+		<section>
+			<title>System Requirements</title>
+			
+			<para>To run <emphasis>Balloonist</emphasis>, you will need a computer
+			equipped with Apple Mac OS X (10.4 or better), Microsoft Windows, Linux,
+			or Solaris.</para>
+		</section>
+		
+		<section xml:id="getting-started">
+			<title>Installation</title>
+			
+			<section>
+				<title>Mac OS X</title>
+				<para>The Macintosh version of <emphasis>Balloonist</emphasis> requires Mac OS X 10.4 (<quote>Tiger</quote>) or better.</para>
+				
+				<para>You should be presented with a Finder window containing the <emphasis>Balloonist</emphasis>
+				application. With some web browsers, you may first need to double-click the
+				downloaded archive file, which will have a name like <code>balloonist-2.0.dmg</code>.</para>
+				
+				<para>Finally, drag the <emphasis>Balloonist</emphasis> application
+				icon to your Applications folder. You should now
+				be able to run <emphasis>Balloonist</emphasis> from your Application folder
+				by double-clicking on it. It may take a while to open.</para>
+			</section>
+			
+			<section>
+				<title>Windows</title>
+				<!-- see http://www.java.com/en/download/help/sysreq.xml for system requirements -->
+				
+				<para><emphasis>Balloonist</emphasis> for Windows comes packaged
+				as a zip archive. Windows XP is able to handle zip
+				archives natively, but earlier versions
+				of Windows may require additional archive management
+				software like WinZip
+				(<link xl:href="http://www.winzip.com">http://www.winzip.com</link>).</para>
+				
+				<para>Copy your unpacked <emphasis>Balloonist</emphasis>
+				distribution to the <code>Program Files</code> directory
+				on your computer using Windows Explorer. This will typically
+				be located on your <code>c:</code> drive. You should be able to run
+				<emphasis>Balloonist</emphasis> from here by double-clicking on its
+				application icon, which will be labeled <code>Balloonist.exe</code>.</para>
+				
+				<para>If, after double-clicking, you are presented with a toolbar and
+				workspace, then your installation  is complete and you may advance to the
+				next section.</para>
+				
+				<para>If, on the other hand, you receive an alert dialogue,
+				you may need to install additional software.
+				<emphasis>Balloonist</emphasis> requires the Java Runtime Environment
+				to operate. Should you receive a message
+				that Java needs to be installed or "Could not find the main class", dismiss the dialogue and
+				obtain an appropriate <link linkend="java">Java Runtime Environment</link>.</para>
+			</section>
+			
+			<section>
+				<title>Other Operating Systems</title>
+				
+				<para><emphasis>Balloonist</emphasis> should be able to run on any
+				system capable of operating a <link linkend="java">version 1.4 Java Runtime
+				Environment</link> or better. Java is installed by default on Solaris, and
+				also ships with most Linux distributions.</para>
+				
+				<para>Download and unzip the Java <emphasis>Balloonist</emphasis>
+				distribution to your home directory or a subdirectory underneath it.</para>
+				
+				<para>Once unpackaged, you should be able to open the resulting
+				<code>balloonist.jar</code> file from your desktop manager.</para>
+
+				<para>Some older desktop managers may not have a file association for
+				Java executables. Others may incorrectly associate them with a zip
+				archive management application. To manually start
+				<emphasis>Balloonist</emphasis>, open up a command shell, change to the
+				unpacked directory using the <code>cd</code> command, and enter the
+				instruction <code>java -jar balloonist.jar</code></para>
+			</section>
+
+			<section xml:id="java">
+				<title>Java Runtime Environment Information</title>
+				
+				<para>Java is a framework for safe and portable software
+				applications. Under most circumstances, you shouldn't need
+				to know or care that it's being used.</para>
+				
+				<para>At release time, 
+				<emphasis>Balloonist</emphasis> worked with versions 1.4, 5.0, 6.0, 7.0 and 8.0
+				of the Java Runtime Environment. Some features are available
+				only under version 6.0 or better.</para>
+				
+				<para>Java can be obtained at
+				<link xl:href="http://www.java.com/">http://www.java.com/</link></para>
+				
+				<para xml:id="default-java">To set a particular Runtime Environment as the
+				default for OS X, open the utility installed at
+				<code>/Applications/Utilities/Java/(Java version folder)/Java Preferences</code>
+				and drag that Runtime first in the preferred Java Application Runtime
+				list. If no such utility exists, you may need to run
+				Software Update, which is available under the Apple Menu.</para>
+			</section>
+			
+		</section>
+		
+		<section>
+			
+			<title>Help</title>
+			
+			<para>This documentation is available at any time from within the Balloonist Help item
+			under the application's Help Menu.</para>
+			
+		</section>
+		
+	</chapter>
+	<chapter xml:id="meat">
+		<title>Using Balloonist</title>
+
+		<section>
+			<title>Workspace Geography</title>
+
+			<para><emphasis>Balloonist</emphasis> presents documents in an
+			integrated workspace. The central Artwork Pane
+			of this workspace depicts your artwork.
+			It can be edited with items selected from the
+			pull-down menus, or with the vertical toolbar
+			along the left-hand side of the screen.</para>
+			
+			<figure>
+				<title>The workspace</title>
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="workspace.png" />
+					</imageobject>
+				</mediaobject>
+			</figure>
+						
+			<para>A Properties Pane in the upper right-hand
+			corner of the Workspace provides more detailed
+			control over artwork characteristics.</para>
+
+			<para>When first started, <emphasis>Balloonist</emphasis>
+			provides a default panel layout. This can be
+			<link linkend="layout">changed</link> from the Properties
+			Pane, or new layouts can be generated from templates under
+			the New sub menu in the File menu.</para>
+
+			<para>The Object Hierarchy Pane provides a view of your artwork
+			broken up into a component tree. This tree should allow you
+			to easily select portions of your artwork, even if obscured or too
+			thin to easily click on.</para>
+		</section>
+		
+		<section>
+			<title>Properties Pane</title>
+			
+			<para>Artwork properties can be edited from the
+			Properties Pane, located in the upper right-hand section of the Workspace.</para>
+			
+			<para>Fields are linked to the location and dimensions of
+			selected elements. A units dropdown control allows these dimensions
+			to be viewed and edited using different systems of measurement.</para>
+			
+			<para>If an artwork element is contained by a <link linkend="panels">panel</link>,
+			its position coordinates will be specified relative reference frame of that panel.</para>
+
+			<para>If multiple items are selected, the Properties Pane will
+			do its best to average their properties.</para>			
+						
+			<para>Although <emphasis>Balloonist</emphasis> allows artwork
+			elements to be positioned to a very specific number
+			of decimal places, we suggest you refrain from doing so.
+			Instead, concentrate on aligning your artwork elements to make them look best.</para>
+		</section>
+		
+		<section xml:id="layout">
+			<title>Layout</title>
+			
+			<para><emphasis>Balloonist</emphasis>'s Layout Properties Pane
+			can help simplify the task of panel layout by automatically adjusting
+			several panels at once.</para>
+			
+			<para>The Properties Pane becomes available when no artwork
+			elements are selected. If there is an active selection
+			and you would like to release it, choose Select None from the
+			Edit menu, or choose the Selection tool from the toolbar and
+			click outside the drawing area.</para>
+			
+			<para>Changes to any of the fields in the Layout properties pane
+			will typically result in an automatic re-layout of your artwork's panels.
+			If you are unhappy with any of the changes, you can always Undo them from
+			the Edit Menu.</para>
+			
+			<para>Automatic Layout may also be turned off from the
+			<link linkend="page">Page Properties Pane</link>.</para>
+			
+			<para>The layout itself is depicted in the artwork pane as a
+			light gray rectangle behind the panels, with a gray outline.
+			The margin fields control whitespace located between the layout
+			and the edge of the page.</para>
+			
+			<para>The layout's width and height are determined by the
+			<link linkend="page">page dimensions</link> and the layout's margins.</para>
+			
+			<figure>
+				<title>Layout in the Artwork and Properties Panes</title>
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="layout.png" />
+					</imageobject>
+				</mediaobject>
+			</figure>
+			
+			<para>The number of panels can also be specified. While panel layout is
+			set to automatic, picking a number of panels that is
+			greater than the existing panel count will result in the implicit addition
+			of new panels. If you specify a smaller number, panels will be removed
+			backwards in sequence from the end of the list in the Object Hierarchy.
+			Again, you can always Undo layout operations, which lets you easily
+			recover any panels that have been inadvertently removed.</para>
+			
+			<para>Other fields set the aspect ratio (or shape) of panels,
+			and the default dimensions of the <link linkend="gutters">gutters</link>
+			between them. Higher aspect ratios correspond to wider panels.</para>
+			
+			<para>Since it overrides any changes that have been made to individual
+			panels, you will typically want to customize layout early on in your
+			artwork's lifetime.</para>
+		</section>
+		
+		<section xml:id="page">
+			<title>Page</title>
+			
+			<para>To change the overall dimensions of your artwork, you can select
+			the outermost and uppermost node in the Object Hierarchy Pane, titled
+			"Page".</para>
+			
+			<para>In addition to width and height fields, this Property Pane also
+			provides radio buttons that can used to deactivate or reactivate
+			automatic panel layout.</para>
+		</section>
+		
+		<section>
+			<title>The Toolbar</title>
+
+			<para>When you start <emphasis>Balloonist</emphasis>, the
+			Selection Tool is active in the Toolbar. The
+			Selection Tool looks like an arrow and allows you
+			to select balloons and their sub-components.</para>
+
+			<para>Other more conceptual artwork
+			elements, like panels, must be selected
+			from the Object Hierarchy Pane.</para>
+
+			<para>The other tools in <emphasis>Balloonist</emphasis>'s toolbar
+			are used to create artwork elements.</para>
+			
+			<table frame='all'><title>Toolbar Legend</title>
+				<tgroup cols='2' align='left' colsep='2' rowsep='2'>
+					<colspec colname='icon'/>
+					<colspec colname='title'/>
+					<tbody>
+						<row>
+							<entry>
+								<mediaobject>
+									<imageobject>
+										<imagedata fileref="../resources/icons/word.png" />
+									</imageobject>
+								</mediaobject>
+							</entry>
+							<entry>Word Balloon</entry>
+						</row>
+						<row>
+							<entry>
+								<mediaobject>
+									<imageobject>
+										<imagedata fileref="../resources/icons/word-curved.png" />
+									</imageobject>
+								</mediaobject>
+							</entry>
+							<entry>Word Balloon with a Curved Stem</entry>
+						</row>
+						<row>
+							<entry>
+								<mediaobject>
+									<imageobject>
+										<imagedata fileref="../resources/icons/word-stemless.png" />
+									</imageobject>
+								</mediaobject>
+							</entry>
+							<entry>Stemless Word Balloon</entry>
+						</row>
+						<row>
+							<entry>
+								<mediaobject>
+									<imageobject>
+										<imagedata fileref="../resources/icons/panel.png" />
+									</imageobject>
+								</mediaobject>
+							</entry>
+							<entry>Panel</entry>
+						</row>
+						<row>
+							<entry>
+								<mediaobject>
+									<imageobject>
+										<imagedata fileref="../resources/icons/thought.png" />
+									</imageobject>
+								</mediaobject>
+							</entry>
+							<entry>Thought Balloon</entry>
+						</row>
+						<row>
+							<entry>
+								<mediaobject>
+									<imageobject>
+										<imagedata fileref="../resources/icons/thought-stemless.png" />
+									</imageobject>
+								</mediaobject>
+							</entry>
+							<entry>Stemless Thought Balloon</entry>
+						</row>
+						<row>
+							<entry>
+								<mediaobject>
+									<imageobject>
+										<imagedata fileref="../resources/icons/narration-free.png" />
+									</imageobject>
+								</mediaobject>
+							</entry>
+							<entry>Narration</entry>
+						</row>
+						<row>
+							<entry>
+								<mediaobject>
+									<imageobject>
+										<imagedata fileref="../resources/icons/lollipop.png" />
+									</imageobject>
+								</mediaobject>
+							</entry>
+							<entry>Lollipop</entry>
+						</row>
+						<row>
+							<entry>
+								<mediaobject>
+									<imageobject>
+										<imagedata fileref="../resources/icons/starburst.png" />
+									</imageobject>
+								</mediaobject>
+							</entry>
+							<entry>Starburst</entry>
+						</row>
+						<row>
+							<entry>
+								<mediaobject>
+									<imageobject>
+										<imagedata fileref="../resources/icons/gouache.png" />
+									</imageobject>
+								</mediaobject>
+							</entry>
+							<entry>Gouache</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			
+			<para>If you use the mouse to
+			position the pointer over one of the toolbar buttons, a tool-tip
+			will momentarily appear, identifying the associated artwork element.</para>
+			
+			<section xml:id="zoomer">
+				<title>Zoomer</title>
+			
+				<para>At the bottom of the toolbar, you should see a vertical slider control.
+				This is the <emphasis>Zoomer</emphasis>. As you slide the Zoomer up and down,
+				the view in the Artwork Pane is scaled without permanently affecting your
+				artwork. A percentage beneath the slider indicates the selected display
+				magnification.</para>
+
+				<para>You can always return to a 1:1 scale by choosing the Actual Size
+				command from the View Menu.</para>
+			</section>
+				
+		</section>
+
+		<section>
+			<title>Artwork Elements</title>
+			
+			<section>
+				
+				<title>Balloons</title>
+				
+				<para><emphasis>Balloons</emphasis> are a common dialogue 
+				element in comics. They typically consist of text circumscribed
+				by an outline. This dialogue may be spoken or
+				unspoken.</para>
+
+				<para><emphasis>Stems</emphasis> refer to pointers
+				emanating from balloon perimeters. Stems attribute
+				dialogue to one or more characters. Some people use
+				the term "tails" to describe this feature.</para>
+
+				<para>Balloon outlines often consist of ovals.
+				The character of these ovals vary widely, a fact
+				which has complicated the use of software
+				in their generation.</para>
+
+				<para><emphasis>Balloonist</emphasis> tries to reproduce
+				as much of this diversity as possible by allowing
+				users to <link linkend="shape-props">alter</link> the
+				<emphasis>rectangularness</emphasis> of these ovals.</para>
+				
+				<para>Comics generally distinguish <emphasis>Thought</emphasis>
+				Balloons from <emphasis>Speech</emphasis> balloons with round
+				<emphasis>ruffles</emphasis> and <emphasis>bubbled</emphasis>
+				stems. <emphasis>Balloonist</emphasis> follows these conventions
+				when initially creating artwork elements, but allows you to change
+				them afterwards.</para>
+				
+				<para><emphasis>Starbursts</emphasis> exhibit a jagged style
+				of ruffling.</para>
+				
+				<para>Some comics feature an unbordered style of word balloon attributed
+				by a simple straight line. <emphasis>Balloonist</emphasis> calls these
+				balloons <emphasis>Lollipops</emphasis>.</para>
+					
+				<para><emphasis>Narrations</emphasis> are parallelogram-shaped
+				balloons used to describe events or place them in context.</para>
+				
+				<para><emphasis>Gouache</emphasis> can be used to replace the text in
+				balloons from scanned art. Applying gouache results in a lettered and unbordered
+				white oval. This may be useful for language translation, scanlation, or perhaps those
+				replace-the-dialogue contests in the newspaper and certain curmudgeonly blogs.</para>
+				
+				<para>New artwork elements, balloons included, are automatically
+				<link linkend="selections">selected</link> upon creation. The unstemmed portion of
+				a balloon that has been selected will appear nestled within a translucent blue rectangle.</para>
+				
+				<section>
+					
+					<title>Balloon Properties</title>
+					
+					<para>When a balloon is selected, the Properties Pane displays a number
+					of specialized controls for its configuration.</para>
+					
+					<figure>
+						<title>Balloon properties</title>
+						<mediaobject>
+							<imageobject>
+								<imagedata fileref="balloon-props.png" />
+							</imageobject>
+						</mediaobject>
+					</figure>
+		
+					<para xml:id="color-chart-tool">A color chart tool allows you to change the colors of the
+					outline and interior of some selected elements. Color chart tools depict
+					a filled arc. To change the balloon's interior color, click and
+					pull-down the filled portion of the arc. The change the balloon's
+					outline color, click and pull-down the outline portion of the arc.</para>
+		
+					<figure>
+						<title>A color chart tool</title>
+						<mediaobject>
+							<imageobject>
+								<imagedata fileref="color-chart-tool.png" />
+							</imageobject>
+						</mediaobject>
+					</figure>
+					
+					<para>You may also change the thickness of a balloon's outline.
+					Unlike other properties, outline thickness is always measured in points,
+					and may not exceed 5.0.</para>
+
+				</section>
+				
+				<section xml:id="balloon-text">
+					
+					<title>Balloon Text</title>
+
+					<para>Text for selected balloons can be edited and styled
+					in the Properties Pane's text area, which can be found at its bottom.
+					To add or revise balloon text, click the mouse at the desired location
+					and start typing or entering text using another input method. Text can be selected,
+					copied, cut, and pasted from the text area in the same manner as in other
+					applications.</para>
+					
+					<para>Dropdown boxes in the Properties Pane allow you to change the
+					font family and size of selected text. Certain fonts will 
+					<link linkend="uneditably-pasteable-fonts">be replaced</link> if
+					pasted into other software applications or exported to PDF format.
+					The names of these fonts are italicized and colored in the font family dropdown
+					control. For best results, stick with fonts whose names are not
+					italicized.</para>
+					
+					<para>The default font for new balloon text can be configured using the
+					<link linkend="prefs">Preferences</link> command.</para>
+					
+					<para>The Format pull-down menu can be used to provide boldfacing, italics,
+					or underlining. It can also be used to remove these attributes.</para>
+					
+					<para>You can override the natural layout of text within your balloons
+					by inserting newlines into them. To do this, click on the desired location
+					in the text area and then press the Return key.</para>
+					
+					<para>The Vertical checkbox can be used to orient
+					text from top-to-bottom and right-to-left. This is most useful
+					for Chinese and Japanese writing, but can be used with text
+					in any language.</para>
+					
+					<para>Text is offset from the exterior of its balloon by configurable
+					margins. When a balloon is selected, the Artwork Pane illustrates this
+					using a <emphasis>balloon yolk</emphasis>. Balloon yolks are indicated by
+					a dashed, red oval.</para>
+					
+					<figure>
+							<title>A balloon yolk</title>
+							<mediaobject>
+								<imageobject>
+									<imagedata fileref="yolk.png" />
+								</imageobject>
+							</mediaobject>
+						</figure>
+					
+					<para>To break balloon text across several sections when there is more
+					than one shape, use the tab key. You can consolidate shapes within a
+					balloon using the <link linkend="merge">Merge command</link>, or the
+					<link linkend="rearrange-shapes">Object Hierarchy</link>.</para>
+				
+				</section>
+				
+				<section>
+					
+					<title>Shapes</title>
+					
+					<para>Clicking a balloon's disclosure triangle or plus sign in the Object
+						Hierarchy will usually reveal that it is a container for one or more shapes.
+						These shapes can be selected by clicking on their names in the Object
+						Hierarchy.</para>
+						
+					<para xml:id='shape-props'>Attributes of selected shapes can be adjusted
+					using the Properties Pane. These attributes can include background color,
+					outline color, rectangularness, location, dimensions, and name.</para>
+
+					<figure>
+						<title>A rectangularness slider</title>
+						<mediaobject>
+							<imageobject>
+								<imagedata fileref="rectangularness-slider.png" />
+							</imageobject>
+						</mediaobject>
+					</figure>
+
+
+					<para xml:id="rearrange-shapes">Shapes can be re-arranged by dragging
+					them to a new location
+					in the Object Hierarchy. Shapes can be relocated within and amongst
+					balloons. They may not be moved outside balloons.</para>
+						
+					<para>The height and preferred width of any balloon <emphasis>ruffles</emphasis>
+					(or prongs) can be changed
+					from the Ruffles tab in a selected balloon's Properties Pane.</para>
+
+					<figure>
+						<title>The Ruffles Property Pane</title>
+						<mediaobject>
+							<imageobject>
+								<imagedata fileref="ruffles.png" />
+							</imageobject>
+						</mediaobject>
+					</figure>
+
+					<para>The plus button at the bottom of the pane can add up to ten ruffle harmonics.
+					To delete a ruffle harmonic, click on its number in the list to hilight it, and then
+					press the minus button.</para>
+
+					<para>Another dropdown control, at the rightmost portion of the pane's bottom,
+					allow the ruffle type to be varied from <emphasis>round</emphasis> to
+					<emphasis>jagged</emphasis>.</para>
+
+					<para>Thought balloons and starbursts have ruffles by default.
+					Ruffles may also be added to other balloon ovals.</para>						
+					
+				</section>
+				
+				<section>
+
+					<title>Stems</title>
+					
+					<para>Clicking on a shape's disclosure triangle or plus sign in the Object
+						Hierarchy will
+						reveal any contained attribution stems. Stems are characterized by a
+						<emphasis>root</emphasis>, which is the part where the balloon and the
+						stem touch, and a
+						<emphasis>focus</emphasis>, which is the most distant point on the stem
+						and generally also the thinnest.
+						<emphasis>Balloonist</emphasis> sometimes refers to the
+						<emphasis>leading edge</emphasis> of a stem. This is the first point on
+						the stem's root that is encountered when tracing around a clock face,
+						clock-wise, from 3 o'clock.</para>
+
+					<para>The Properties Pane can be used to adjust the focal points, root, width,
+					style, and curvature of selected stems.</para>						
+						
+					<figure>
+						<title>Stem properties</title>
+						<mediaobject>
+							<imageobject>
+								<imagedata fileref="stem-properties.png" />
+							</imageobject>
+						</mediaobject>
+					</figure>
+					
+					<para><emphasis>Balloons</emphasis> supports three types of stems:
+					<emphasis>icicle</emphasis>, <emphasis>bubbled</emphasis>, and
+					<emphasis>lollipop</emphasis>. When a selected stem is bubbled, the
+					user is presented with an additional slider in the type options area of the
+					Stem properties pane. This slider can control the <emphasis>density</emphasis>
+					of the bubbles.</para>
+						
+					<para xml:id="stem-curvature">Starting with version 2.0, <emphasis>Balloonist</emphasis> can
+					<emphasis>curve</emphasis> stems. The easiest way to produce a curved
+					stem is by using the <emphasis>Word Balloon with a Curved Stem tool</emphasis>
+					in the toolbar.</para>
+					
+					<para>Fine control over stem curvature can be achieved using three
+					sliders in the bottom righthand portion of the Stem properties pane.
+					The top two of these sliders control the <emphasis>inclination</emphasis>
+					at the root and focus of the stem. When a stem is selected, manipulating the
+					inclination sliders will rotate special tangent lines in the artwork
+					pane. The stem's curve will follow those tangent lines at each end.</para>
+					
+					<figure>
+						<title>A Curved Stem</title>
+						<mediaobject>
+							<imageobject>
+								<imagedata fileref="curved-stem.png" />
+							</imageobject>
+						</mediaobject>
+					</figure>
+					
+					<para>The inclination sliders are also useful for jimmying around the
+					bubbles in a bubbled stem.</para>
+					
+					<para>When starting from an uncurved stem, you will need to adjust
+					<emphasis>both</emphasis> inclination sliders before you will notice any
+					curvature.</para>
+					
+					<para>The <emphasis>rigidity</emphasis> slider lets you flatten a curved
+					stem.</para>
+					
+					<figure>
+						<title>A Curved and Flattened Stem</title>
+						<mediaobject>
+							<imageobject>
+								<imagedata fileref="curved-flattened-stem.png" />
+							</imageobject>
+						</mediaobject>
+					</figure>
+					
+					<para>The toolbar offers most balloons in stemmed and unstemmed varieties.
+						Additionally, stems can usually be added later using the Item Menu.</para>
+	
+					<para>Like shapes, stems can also be rearranged using the
+						Object Hierarchy Pane.</para>
+				</section>	
+				
+				<section xml:id="merge">
+
+					<title>Merge &amp; Part</title>
+
+					<para>The Merge command under the Arrange Menu can be used to merge
+					the shapes from several balloons into one. This operation can be
+					reversed with the Part command.</para>
+
+					<para>After clicking in the text area, you can use the tab key
+					to break text across sections in a merged balloon.</para>
+
+					<figure>
+						<title>Merged Thought Balloons</title>
+						<mediaobject>
+							<imageobject>
+								<imagedata fileref="merge.png" />
+							</imageobject>
+						</mediaobject>
+					</figure>
+
+					<para>Upon merging, the newly-composed balloons sections are
+					implicitly ordered spatially, so that text flows as appropriate to
+					its vertical or horizontal orientation. This operation can also be performed
+					later from the Arrange Menu, should subsequent relocations upset
+					proper flow. Text flow amongst sections can also be established manually,
+					by dragging and dropping shapes in a balloon's node in the Object Hierarchy.</para>
+
+					<para>To tie two merged balloons together, simply add a stem to one and drag
+					that stem's focus into the body of the other.</para>
+
+					<figure>
+						<title>Tied Word Balloon Ovals</title>
+						<mediaobject>
+							<imageobject>
+								<imagedata fileref="tied.png" />
+							</imageobject>
+						</mediaobject>
+					</figure>
+
+					<para>You can also use merging to <emphasis>skewer</emphasis> an oval
+					on another oval's stem.</para>
+
+					<figure>
+						<title>A Skewered Balloon Oval</title>
+						<mediaobject>
+							<imageobject>
+								<imagedata fileref="skewered.png" />
+							</imageobject>
+						</mediaobject>
+					</figure>
+
+				</section>
+				
+			</section>
+			
+			<section xml:id="panels">
+
+				<title>Panels</title>
+
+				<para>The artwork elements described so far can be placed inside
+				<emphasis>panels</emphasis>. Panels are generally rectangular shapes
+				that comics use to group together coincident events.</para>
+
+				<para>Panels <emphasis>clip</emphasis> contained artwork elements.
+				This means that any portion of a contained artwork element will be
+				hidden from view, as if it were in matted picture frame.</para>
+				
+				<figure>
+					<title>A Balloon Clipped by a Panel</title>
+					<mediaobject>
+						<imageobject>
+							<imagedata fileref="clipped.png" />
+						</imageobject>
+					</mediaobject>
+				</figure>
+				
+				<para><emphasis>Balloonist</emphasis> will attempt to arrange text
+				in clipped balloons so that it is <emphasis>not</emphasis> clipped,
+				and so that it doesn't overlap its panel's inner margin. When a panel is
+				selected, its inner margin can be configured from the Properties Pane.</para>
+
+				<para>If you want an artwork element to appear as though it's inside a 
+				particular panel, but you don't want the artwork element to be clipped,
+				you may place the artwork element inside the outermost, <emphasis>page</emphasis>
+				element, and position then it over the desired panel.</para>
+
+				<para>Newly-created <emphasis>Balloonist</emphasis> documents
+				have a default arrangement of panels. The particulars of this
+				arrangement will vary depending on the kind of <emphasis>stationery</emphasis>
+				used to create the document. Stationery is available under the
+				File Menu's New submenu.</para>
+
+				<para>When no elements are selected
+				in the Artwork Pane, the Properties Pane allows the default
+				panel arrangement to be <link linkend="layout">quickly reconfigured</link>.</para>
+
+				<para>To avoid complicating the selection of balloons and images, panels
+				cannot be selected from the Artwork Pane. Instead, they must be selected from the
+				Object Hierarchy Pane. The Properties Pane can be used to reshape
+				selected panels, or to alter their inner margins. Selected panels
+				may also be resized by clicking and dragging their corners and sides
+				in the Artwork Pane.</para>
+				
+				<para>If an artwork element is contained by a panel, its coordinates are
+				specified relative to that panel.</para>
+				
+				<section xml:id="gutters">
+				
+					<title>Gutters</title>
+					
+					<para><emphasis>Balloonist</emphasis> implicitly recognizes the
+					interstitial space between panels as <emphasis>Gutters</emphasis>.
+					Gutters are depicted with a pattern resembling the dimpled
+					surface of toy blocks.</para>
+					
+					<figure>
+						<title>Gutters</title>
+						<mediaobject>
+							<imageobject>
+								<imagedata fileref="gutter.png" />
+							</imageobject>
+						</mediaobject>
+					</figure>
+					
+					<para>Gutters can be easily moved around by pressing the mouse and dragging
+					on them. They do not need to be selected first.</para>
+					
+					<para>Panels on either
+					side of a re-located gutter will be resized to accommodate its
+					new placement.</para>
+				
+				</section>
+				
+			</section>
+
+			<section>
+
+				<title>Crowds</title>
+
+				<para>A <emphasis>Crowd</emphasis> is a special container used to
+				group together balloons so that their text will remain aligned
+				relative to each other. <emphasis>Balloonist</emphasis> will
+				prevent the text inside crowded balloons from overlapping.</para>
+
+				<para>Crowds cannot be created directly. Whenever a balloon is
+				created inside a panel,
+				<emphasis>Balloonist</emphasis> will implicitly create a
+				<emphasis>Crowd</emphasis> for the new balloon, if one is not
+				already present.</para>
+
+				<para>If you would prefer a balloon to obscure the text in its
+				overlapped counterparts, you
+				can move it outside its crowd by dragging and dropping it in the
+				Object Hierarchy Pane, or by cutting and pasting.</para>
+
+				<para>Crowded balloons will respect each other's margin settings.
+				Margins of selected balloon can be changed using the Properties
+				Pane.</para>
+
+			</section>
+			
+			<section xml:id="images">
+				
+				<title>Images</title>
+				
+				<para><emphasis>Balloonist</emphasis> allows you to add image content
+				to your artwork via the Place commands under the File Menu. Placed
+				images can be linked or embedded.</para>
+				
+				<para>By default, only files with an extension identifying them as JPG,
+				PNG, or GIF content will be selectable in resulting file dialog. To override this
+				behavior, hold down the option key (Mac OS X) or alt key (other operating
+				systems) when you activate the desired menu item.</para>
+				
+				<para>When you save your artwork, <emphasis>Linked</emphasis> images will
+				be stored as Uniform Resource Locator (URL) addresses. These should be familiar
+				from web browsers, and can be expressed using a variety of protocols. These
+				protocols include <code>http</code> and <code>ftp</code> for images on the
+				World Wide Web, and <code>file</code> for images on your local file system.</para>
+				
+				<para>When you change a URL address, or re-open a saved document, linked image
+				URL's will be consulted to obtain image content.</para>
+				
+				<para><emphasis>Embedded</emphasis> images are actually saved, pixel for
+				pixel, with your artwork. Embedded images also feature a URL address, but
+				it is only provided for reference.</para>
+				
+				<para>The Properties Pane can change the URL address of selected images.
+				It also permits you to toggle them between linked and embedded states. Be warned
+				that changing an image from embedded to linked will cause any cached image
+				content to be lost.</para>
+				
+				<para>If nothing is selected, a placed image will be dropped onto the page,
+				behind any panels. If a panel is selected, <emphasis>Balloonist</emphasis>
+				will place the image inside that panel. If an artwork element is selected,
+				the image will be placed inside the same panel that contains that element.</para>
+				
+				<para>When resizing an image by dragging one of its corners, you can maintain
+				the image's aspect ratio by holding down the shift key.</para>
+				
+				<para>If an images becomes sheared and you'd like to restore its original
+				aspect ratio, use the Reset Width or Reset Height button in the Properties
+				Pane.</para>
+			</section>
+			
+			<section xml:id="selections">
+
+				<title>Selections</title>
+
+				<para>Artwork elements are automatically
+				<emphasis>selected</emphasis> upon creation.</para>
+
+				<para>Artwork elements can be <emphasis>deselected</emphasis>
+				by clicking within an empty region of the document, or by choosing the
+				<emphasis>Select None</emphasis> item from the Edit Menu.</para>
+
+				<para>To select an element that is not currently selected, use the mouse to move
+				the cursor over that element, and click once.</para>
+
+				<para>Alternately, elements may be selected by clicking on their names in the
+				Object Hierarchy Pane.</para>
+				
+				<para>To select multiple elements, you may use the Shift key in combination with
+				the methods above. If nothing is selected, you may also select multiple elements
+				by pressing the mouse and dragging a selection rectangle around elements in the
+				Artwork Pane.</para>
+				
+				<section>
+
+					<title>Moving &amp; Resizing Selections</title>
+				
+					<para>Selected elements can be relocated by positioning the mouse cursor over them,
+					pressing the mouse button, and dragging the mouse to a new location. This motion can
+					be constrained to a particular axis by holding down the Shift key.</para>
+					
+					<para>Most selected elements can be resized by dragging their sides and corners
+					in the Artwork Pane. The cursor's appearance will change when positioned over these
+					spots of a selected element. Resizing can also be constrained using the Shift key.</para>
+	
+					<para>Properties of selected elements can be changed using the
+					Properties Pane.</para>
+				
+				</section>
+				
+				<section>
+
+					<title>Moving Stem Components</title>
+					
+					<para>Components of selected stems (or the stems of selected balloons) can also be
+					relocated from the Artwork Pane. The mouse cursor will change its appearance to indicate
+					when it is positioned over a stem or its focus.</para>
+					
+					<para>When you move a balloon, the focal points that its stems point to ordinarily
+					remain fixed. To move stem focal points along with their balloon, hold down the Command key
+					when using Mac OS X, then press and drag as before. On other platforms, use the second
+					mouse button to re-locate a balloon and its stems together.</para>
+					
+					<para>To resize a stem root, select its stem and use the root width slider in the
+					Properties Pane.</para>
+
+				</section>
+
+			</section>
+			
+		</section>	
+		
+		<section>
+			<title>Object Hierarchy Pane</title>
+			
+			<para>The Object Hierarchy Pane presents a tree view of your artwork elements.
+			Containers are represented by folder icons. These can be opened to reveal
+			contents by clicking the accompanying disclosure triangle (Mac OS X) or
+			plus sign.</para>
+			
+			<para>Artwork elements may be selected by clicking on their companion
+			icons or names in the Object Hierarchy Pane. Similarly, selections made in
+			the Artwork Pane should also be reflected here.</para>
+			
+			<para>Artwork elements can be clicked, dragged, and relocated within the
+			Object Hierarchy Pane, with some restrictions. A shape can only be located
+			within a balloon, and a stem can only be located inside a shape.</para>
+		</section>
+
+		<section>
+
+			<title>Leftovers</title>
+
+			<para>Artwork elements can also be reorganized using the commands under the Arrange
+			Menu. Bring Forward, Send Backward, Bring to Front, and Send to Back each affect
+			which portions appear "on top" when artwork elements overlap. This is sometimes
+			referred to as z-order. Properly expanded, the Object Hierarchy represents
+			the sequence of artwork elements.</para>
+
+			<para>Most operations in <emphasis>Balloonist</emphasis> can be undone and redone
+			using the items under the Edit Menu.</para>
+
+			<para>In addition to the <link linkend="zoomer">zoomer</link>, the View Menu can also be
+			used to change the magnification level of the Artwork Pane.</para>
+			
+			<para>If the view is scaled such that your units of choice would appear reasonably
+			large, you can reveal rulers by resizing the application window to larger than
+			your artwork.</para>
+			
+			<para>When you are done using <emphasis>Balloonist</emphasis>, you can end your session
+			using the Quit command. On Mac OS X, Quit is located under the Application Menu.
+			On other platforms, it can be found under the File menu.</para>
+		</section>
+		
+	</chapter>
+	
+	<chapter>
+		
+		<title>Document Management</title>
+		
+		<para>The File Menu provides commands to generate new artwork using the default
+		layout, from stationery, or with a single panel displaying an existing image file.
+		The commands to start from existing images work like their counterpart commands
+		to <link linkend="images">place images</link>.</para>
+		
+		<para><emphasis>Balloonist</emphasis> artwork can be opened and saved using
+		items under the File Menu. All artwork elements, including text, balloons, and
+		<link linkend="images">any embedded image content</link>, will be saved with
+		your document.</para>
+		
+		<para>New documents will default to the file extension <code>bna</code>.
+		We recommend keeping this file extension, since some platforms
+		require it to associate documents with <emphasis>Balloonist</emphasis>.</para>
+		
+		<para>You may save a copy of a document using a new name with the Save As
+		command under the File Menu.</para>
+		
+		<para>Fonts are not embedded within <emphasis>Balloonist</emphasis>
+		documents. You will receive a warning upon opening any document that uses
+		fonts that are not available on your system. References to unavailable fonts will be
+		implicitly mapped to the default font as set in your <link linkend="prefs">user
+		preferences</link>.
+		If you save a file after font references have been replaced, the old font references
+		will be lost.</para>
+		
+	</chapter>
+	
+	<chapter>
+		
+		<!--
+		<info>
+			<keywordset>
+				<keyword>distribute</keyword>
+				<keyword>distribution</keyword>
+			</keywordset>
+		</info>
+		-->
+	
+		<title>Interacting with the Outside World</title>
+		
+		<para>There wouldn't be much point to producing artwork in
+		<emphasis>Balloonist</emphasis> if you couldn't share that artwork with the outside
+		world. Consequently, <emphasis>Balloonist</emphasis> can print your artwork,
+		export it to a number of standard file formats, and copy and paste portions
+		of it to familiar graphics software applications.</para>
+		
+		<indexterm><primary>distribution</primary></indexterm>
+		<indexterm><primary>distribute</primary></indexterm>
+		
+		<section>
+			
+			<title>Printing</title>
+			
+			<para>Artwork can be printed by choosing the Print item under
+			the File Menu. If your artwork is taller than it is wide, it will
+			be printed using portrait orientation. If your artwork is wider than
+			it is tall, it will be printed using landscape orientation.</para>
+			
+			<para>Alternately, artwork can be <link linkend="pdf-export">exported</link>
+			to another
+			graphics software application, such as Adobe
+			Reader, and printed there. This can be helpful if your printer
+			can't handle the size of your artwork, and you would like to
+			scale the printed image to fit on a single physical page.</para>
+			
+			<para xml:id="fractional-print-nudge">When printing directly from the software on Mac OS X,
+			<emphasis>Balloonist</emphasis>
+			will nudge panels that are positioned at fractional point coordinates to whole number
+			coordinates. This corresponds to a distance smaller than 0.353 millimeters, and is
+			not generally noticeable. Nevertheless, if you'd prefer to avoid the limitation, you
+			can print from another application after Exporting As PDF from the File Menu.</para>
+			
+		</section>
+	
+		<section>
+			
+			<title>File Exchange</title>
+			
+			<para>Using the Export item under the File Menu, <emphasis>Balloonist</emphasis>
+			lets you to write your artwork to PDF, SVG 1.0, or SVG 1.2 vector formats. You
+			may also generate PNG images.</para>
+			
+			<section>
+
+				<title>Vector Export Formats</title>
+			
+				<para xml:id="pdf-export">Adobe Portable Document Format
+				(<link xl:href="http://www.adobe.com/products/acrobat/adobepdf.html">PDF</link>)
+				is an established industry standard
+				that is well supported by print shops and publishers.</para>
+				
+				<para xml:id="svg-export">Scalable Vector Graphics
+				(<link xl:href="http://www.w3.org/Graphics/SVG/">SVG</link>) is a newer, more open
+				standard. SVG 1.0 is
+				already in widespread use. SVG 1.2 has not yet been fully defined, but will feature
+				more sophisticated support for wrapped text. <emphasis>Balloonist's</emphasis> support
+				for SVG 1.2 should be considered experimental.</para>
+				
+				<para>SVG can be used by many graphics software applications, including
+				<link xl:href="http://www.adobe.com/products/illustrator">Adobe Illustrator</link>
+				and <link xl:href="http://www.inkscape.org">Inkscape</link>. SVG support is also being built
+				into <link xl:href="http://www.mozilla.org/projects/svg/">next-generation web browsers</link>.</para>
+				
+				<para>SVG handles fonts less rigidly than PDF does, which can be useful
+				for working locally with <link linkend="uneditably-pasteable-fonts">certain fonts</link>.</para>
+				
+				<para>Mac OS X users may also generate PDF files from the dialog box reached
+				from the Print command. This option is affected by the
+				<link linkend="fractional-print-nudge">whole number panel coordinate restriction</link>
+				that also affects printing directly from the software on Mac OS X.</para>
+			
+			</section>
+			
+			<section>
+				<title>Image Export</title>
+				
+				<para>Other export options allow you to generate image files. All <emphasis>Balloonist</emphasis>
+				deployments offer output in Portable Network Graphics (PNG)
+				images. <link xl:href="http://www.w3.org/Graphics/PNG/">PNG</link> is a handy, compact
+				image format supported by most modern web browsers.</para>
+				
+				<para>If you have <link linkend="java6">Java 6.0</link> or better installed, you can also export images in
+				Graphics Interchange Format (GIF).</para>			
+			</section>
+			
+			<section>
+				<title>ComicsML Import</title>
+			
+				<para><emphasis>Balloonist</emphasis> also includes basic support for importing
+				comics represented in <link xl:href="http://www.jmac.org/projects/comics_ml/">ComicsML</link>
+				definition language. This support is available from
+				the File Menu.</para>
+				
+			</section>
+			
+		</section>
+		
+		<section>
+			
+			<title>Copy and Paste</title>
+			
+			<para>Once selected, portions of <emphasis>Balloonist</emphasis> artwork
+			can be copied and pasted to any graphics software application with clipboard PDF
+			support. These include
+			<link xl:href="http://www.adobe.com/products/illustrator">Adobe Illustrator</link>
+			and <link xl:href="http://www.corel.com">CorelDRAW</link>.</para>
+			
+			<para>Unadorned text copied from <emphasis>Balloonist</emphasis> without its
+			parent balloon can be pasted into most software applications.</para>
+			
+			<para xml:id="editability">On <link linkend="leopard-editability">most platforms</link>, text located inside balloons can be pasted to other applications
+			and exported to <link linkend="pdf-export">PDF format</link>
+			in a manner that will allow it to be edited later.
+			This flexibility may come at the
+			expense of rendering accuracy if the destination application does not support
+			the same fonts and text characteristics that <emphasis>Balloonist</emphasis>
+			does.</para>
+			
+			<para>On platforms where this functionality is available, it is the default behavior. The <link linkend="prefs">Preferences command</link>
+			allows you to request that <emphasis>Balloonist</emphasis> instead work to
+			preserve the accuracy of pasted text at the expense of its
+			editability. This option causes text too be pasted and exported to
+			PDF format as vector glyphs.</para>
+			
+			<para xml:id="uneditably-pasteable-fonts">Certain fonts will usually be
+			replaced when pasted into another application or exported to PDF.
+			Fonts with this restriction are italicized and colored in the font
+			family dropdown control. On Mac OS X, these include fonts
+			stored in suitcase files, which typically have no file extension and a file
+			type code of "FFIL".</para>
+			
+			<para>Often, this limitation can be overcome by exporting artwork to
+			<link linkend="svg-export">SVG format</link>.</para>
+			
+		</section>
+		
+	</chapter>
+	
+	<chapter xml:id="prefs">
+		<title>Preferences</title>
+		
+		<para>On Mac OS X, the Preferences command can be found under the
+		<emphasis>Balloonist</emphasis> Application Menu. On other platforms,
+		it is located under the Help Menu.</para>
+		
+		<para>The Preferences command brings up a Preferences Window. This
+		Window is sub-divided into <emphasis>Text</emphasis>
+		and <emphasis>Shape</emphasis> tabs. As you change various
+		defaults, you can see their effect on a sample balloon.</para>
+		
+		<section>
+			<title>Text Tab</title>
+		
+			<para>The Text Tab lets you change the default font
+			for <link linkend="balloon-text">balloon text</link>.
+			To revert back to the shipping default font, click the Reset button.</para>
+
+			<para>The Text Tab also provides control over the
+			<link linkend="editability">transmission of text to other software applications</link>
+			through a Preserve dropdown.</para>
+
+			<para>This dropdown affects Copy and Paste, as well as the Export
+			As PDF command under the File Menu. It has no effect on the Mac OS X Print Dialog's Save as PDF
+			feature, Adobe Acrobat Distiller, or any other external method for PDF Export.</para>
+			
+			<para>Users running <link linkend="java6">Java 6</link>
+			will also be provided with an option to
+			<emphasis>kern</emphasis> text. Kerning employs special information stored
+			within a font to adjust the horizontal spacing of particular character pairs
+			(for example, "A" and "V" or "T" and "o") to use space optimally.</para>
+		</section>
+		
+		<section>
+			<title>Shape Tab</title>
+			
+			<para>The Shape Tab establishes default characteristics for the shape and outline
+			of balloons. Sliders control default rectangularness,
+			<link linkend="color-chart-tool">color</link>,
+			text margin, and line thickness.</para>
+		</section>
+		
+	</chapter>
+	
+	<chapter>
+		
+		<title>Terms, Conditions, and Licensing</title>
+		
+		<section xml:id="terms-and-conditions">
+			
+			<!-- Note: the above id is used to tag this section for inclusion in a 
+			software dialog box. Please do NOT change this attribute! -->
+			
+			<title>Terms &amp; Conditions</title>
+			
+			<section>
+				<title>Usage Agreement</title>
+
+				<para>The authors are not responsible
+				for any damages resulting from the use or misuse of this software.
+				<emphasis>Balloonist</emphasis> is offered without warranty under a GNU GPL v2 license.</para>
+			</section>
+		</section>
+	</chapter>
+	
+	<chapter xml:id="support">
+		
+		<title>Known Issues</title>
+
+		<section>
+		
+			<title>Known Issues</title>
+			
+			<section>
+				<title>Problems with Mixed Arabic and Roman Text on Mac OS X</title>
+			
+				<para>There is a problem on Max OS X that results in the incorrect layout of
+				balloons that mix Arabic and Roman text. Because Mac OS X will implicitly substitute
+				characters missing from one font with characters from another, this may also result
+				in problems when entering only Roman characters using an Arabic font, or vice versa.</para>
+			</section>
+			
+			<section>
+				<title>Placed Image Artifacts on Mac OS X 10.4</title>
+				
+				<para>Users of Mac OS X 10.4 may experience unwanted tiny, white rectangles in regions of placed images. This problem can be resolved by changing the default Java implementation to Java 2 Standard Edition 5.0 (also sometimes known, confusingly, as "Java Runtime Environment 1.5") or better. This is the default Java version as of Mac OS X 10.5 (Leopard.)</para>
+
+				<para>Apple provides a <link linkend="default-java">utility</link> to set Java 5.0 or better as the default.</para>
+			</section>
+						
+			<section xml:id="leopard-editability">
+				<title>Can't Export Text Editably on Mac OS X 10.5</title>
+				
+				<para>Unfortunately, text cannot be editably exported to PDF, or editably copied-and-pasted to other applications, on Mac OS X 10.5 (Leopard). Instead, text will instead appear as uneditable vector glyphs at the destination. To workaround, export artwork to SVG, instead.</para>
+			</section>
+		</section>
+		
+	</chapter>
+	
+</book>
+

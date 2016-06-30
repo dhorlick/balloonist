@@ -1,0 +1,7 @@
+<layouts>
+	<layout name="Pudgy Cat" apertures="6" aspect-ratio="1.44" height="458" hgap="11.0" hmargin="31.18" vgap="11.0" vmargin="50.0" width="898" x="0" y="0"/>
+	<layout name="Lefty Boomers" apertures="6" aspect-ratio="1.51" height="458" hgap="10.0" hmargin="28.346456692913385" vgap="10.0" vmargin="50.0" width="898" x="0" y="0"/>
+	<layout name="Feisty Grandparents" apertures="8" aspect-ratio="1.11" height="458" hgap="17.0" hmargin="60.0" vgap="17.0" vmargin="50.0" width="898" x="0" y="0"/>
+	<layout name="Classic" apertures="4" aspect-ratio="1.374633" height="541" hgap="10.0" hmargin="60.0" vgap="10.0" vmargin="50.0" width="727" x="0" y="0"/>
+	<layout name="Lo-res Droids" apertures="4" aspect-ratio="0.75" hgap="14" vgap="14" width="684" height="216" x="0" y="0" />
+</layouts>

@@ -22,7 +22,7 @@ The installation will also generate user documentation. It can be browsed at `ap
 
 The *balloon-engine* module is a library that uses the Java 2D API and the [iText PDF library](http://itextpdf.com) to provide circumscribed text layout. It was built for comics, but might also benefit illustration, computer-assisted design and diagramming software.
 
-The *app* module uses Java Swing to supply *Ballonist's* graphics user interface.
+The *app* module uses Java Swing to supply *Balloonist's* graphics user interface.
 
 ## Contributors
 
@@ -30,4 +30,4 @@ The *app* module uses Java Swing to supply *Ballonist's* graphics user interface
 
 ## License
 
-*Balloonst* is released under the GNU GPLv3 license. See LICENSE.txt for details.
+*Balloonist* is released under the GNU GPLv3 license. See LICENSE.txt for details.

@@ -2,7 +2,7 @@
 
 ## Installation
 
-*Balloonist* in implemented in [Java](http://java.com) and built with [Apache Maven](https://maven.apache.org) version 3.0.
+*Balloonist* is implemented in [Java](http://java.com) and built with [Apache Maven](https://maven.apache.org) version 3.0.
 
 *Balloonist* runs under versions 1.4, 5.0, 6.0, 7.0 and 8.0 of the Java Runtime Environment. Although in principle *Balloonist* could be built on any of the Java Software Development Kits that correspond to these runtime versions, in practice you'll need the Java 5 one or better, since Maven v3 requires it.
 

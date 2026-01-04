@@ -17,8 +17,8 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
-					<source>7</source>
-					<target>7</target>
+					<source>8</source>
+					<target>8</target>
 						<!--
 							You can go back as far as source v1.3 here
 							but you'll need Maven v3 or earlier. 

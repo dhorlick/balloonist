@@ -6,6 +6,8 @@
 
 *Balloonist* runs under versions 1.4 thru 17 and beyond of the Java Runtime Environment. Although in principle *Balloonist* could be built on any of the Java Software Development Kits that correspond to these runtime versions, in practice you'll need the Java 7 one or better, since Maven v3.8 (the current aptitude version, for long-term-support Debian) requires it.
 
+On newer Linux distro versions (i.e. Debian Trixie), you'll also need to install openjdk-XX-jre (for example, `sudo apt install openjdk-17-jre`) for graphics to work.
+
 Once Java and Maven are installed, you can build and install *Balloonist* by typing
 
 ```mvn install```
